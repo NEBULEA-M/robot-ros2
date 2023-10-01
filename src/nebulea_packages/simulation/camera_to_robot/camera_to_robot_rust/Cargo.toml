@@ -1,0 +1,28 @@
+[package]
+name = "camera_to_robot"
+version = "0.0.1"
+authors = ["Loi Dinh <loidinh.git@gmail.com>"]
+edition = "2021"
+
+[[bin]]
+name = "camera_publisher"
+path = "src/camera_publisher.rs"
+
+[[bin]]
+name = "coordinate_transform"
+path = "src/coordinate_transform.rs"
+
+[[bin]]
+name = "robotic_arm_publishing_subscriber"
+path = "src/robotic_arm_publishing_subscriber.rs"
+
+[dependencies]
+anyhow = {version = "1.0.75", features = ["backtrace"]}
+nalgebra = "0.32.3"
+rand = "0.8.5"
+
+[dependencies.rclrs]
+version = "0.3.1"
+
+[dependencies.std_msgs]
+version = "*"
