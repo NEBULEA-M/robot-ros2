@@ -1,0 +1,5 @@
+sensor_msgs/BatteryState desired_battery_state
+---
+sensor_msgs/BatteryState final_battery_state
+---
+sensor_msgs/BatteryState current_battery_state
