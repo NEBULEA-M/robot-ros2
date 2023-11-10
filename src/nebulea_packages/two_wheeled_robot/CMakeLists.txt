@@ -33,7 +33,7 @@ find_package(action_msgs REQUIRED)
 include_directories(include)
 
 install(
-  DIRECTORY config include launch maps media meshes models params rviz scripts src two_wheeled_robot urdf worlds
+  DIRECTORY include launch params scripts two_wheeled_robot
   DESTINATION share/${PROJECT_NAME}
 )
 
@@ -44,6 +44,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/battery_state/battery_state_pub.py
   scripts/navigate_to_charging_dock.py
+  scripts/transforms/map_to_base_link_transform.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
