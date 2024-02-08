@@ -22,7 +22,7 @@ nalgebra = "0.32.3"
 rand = "0.8.5"
 
 [dependencies.rclrs]
-version = "0.3.1"
+version = "0.4.1"
 
 [dependencies.std_msgs]
 version = "*"
