@@ -33,7 +33,7 @@ find_package(action_msgs REQUIRED)
 include_directories(include)
 
 install(
-  DIRECTORY include launch params scripts two_wheeled_robot
+  DIRECTORY config include launch params scripts two_wheeled_robot urdf
   DESTINATION share/${PROJECT_NAME}
 )
 
