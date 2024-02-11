@@ -1,4 +1,9 @@
-Install dependent ROS2 packages from [here](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#pc-setup)
+Install terminator split tool
+```sh
+sudo apt install terminator
+```
+
+# Install dependent ROS2 packages from [here](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#pc-setup)
 
 Gazebo
 ```sh
@@ -43,14 +48,21 @@ vcs import src < src/ros2_rust/ros2_rust_humble.repos
 colcon build
 ```
 
+Install tf transform
+```sh
+sudo apt-get install ros-humble-turtle-tf2-py ros-humble-tf2-tools ros-humble-tf-transformations
+```
+
+Install localization
+```sh
+sudo apt-get install ros-humble-robot-localization
+```
+
 Install rust packages for ros2
 ```sh
 . ./install/setup.sh. ./install/setup.sh
 ```
 
-sudo apt-get install ros-humble-turtle-tf2-py ros-humble-tf2-tools ros-humble-tf-transformations
-
 
 https://automaticaddison.com/go-to-a-goal-location-upon-low-battery-ros-2-navigation/
 
-sudo apt-get install ros-humble-robot-localization
