@@ -33,7 +33,7 @@ find_package(action_msgs REQUIRED)
 include_directories(include)
 
 install(
-  DIRECTORY config include launch params scripts two_wheeled_robot urdf
+  DIRECTORY config include launch params scripts two_wheeled_robot urdf worlds maps models rviz
   DESTINATION share/${PROJECT_NAME}
 )
 
@@ -42,6 +42,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
+  scripts/robot_navigator.py
   scripts/battery_state/battery_state_pub.py
   scripts/navigate_to_charging_dock.py
   scripts/transforms/map_to_base_link_transform.py

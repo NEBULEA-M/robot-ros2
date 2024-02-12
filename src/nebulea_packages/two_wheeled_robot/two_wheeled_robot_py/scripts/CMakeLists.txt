@@ -42,18 +42,9 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
-  scripts/run_inspection.py
-  scripts/lift_controller.py
-  scripts/nav_to_pose.py
-  scripts/nav_through_poses.py
-  scripts/pick_and_deliver.py
   scripts/robot_navigator.py
-  scripts/security_demo.py
-  scripts/waypoint_follower.py
   scripts/battery_state/battery_state_pub.py
   scripts/navigate_to_charging_dock.py
-  scripts/navigate_to_charging_dock_v2.py
-  scripts/transforms/map_to_base_link_transform.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
