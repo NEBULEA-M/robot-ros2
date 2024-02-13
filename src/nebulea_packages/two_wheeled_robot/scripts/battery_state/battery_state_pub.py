@@ -1,5 +1,3 @@
-#!/usr/bin/env python3 
-
 """
 Description:
 Publish the battery state at a specific time interval

@@ -4,6 +4,7 @@
 #              If you want to spawn the robot in a pose other than the default, be sure to set that inside
 #              the nav2_params_path yaml file: amcl ---> initial_pose: [x, y, z, yaw]
 #              The robot will return to the charging dock when the /battery_status percentage is low.
+# https://automaticaddison.com
 
 import os
 
@@ -214,6 +215,11 @@ def generate_launch_description():
         package=package_name,
         executable=nav_to_charging_dock_script)
 
+    # Launch navigation to the charging dock
+    start_map_to_base_link_transform_cmd = Node(
+        package=package_name,
+        executable='map_to_base_link_transform.py')
+
     # Launch the ROS 2 Navigation Stack
     start_ros2_navigation_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(nav2_launch_dir, 'bringup_launch.py')),
@@ -248,11 +254,12 @@ def generate_launch_description():
     # Add any actions
     ld.add_action(start_gazebo_server_cmd)
     ld.add_action(start_gazebo_client_cmd)
-    # ld.add_action(spawn_entity_cmd)
+    #  ld.add_action(spawn_entity_cmd)
     ld.add_action(start_robot_localization_cmd)
     ld.add_action(start_robot_state_publisher_cmd)
     ld.add_action(start_rviz_cmd)
     ld.add_action(start_navigate_to_charging_dock_cmd)
+    ld.add_action(start_map_to_base_link_transform_cmd)
     ld.add_action(start_ros2_navigation_cmd)
 
     return ld
