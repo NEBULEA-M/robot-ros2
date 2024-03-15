@@ -33,7 +33,7 @@ find_package(action_msgs REQUIRED)
 include_directories(include)
 
 install(
-  DIRECTORY config include launch params scripts two_wheeled_robot urdf worlds maps models rviz
+  DIRECTORY config include launch maps models params rviz scripts two_wheeled_robot urdf worlds
   DESTINATION share/${PROJECT_NAME}
 )
 

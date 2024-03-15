@@ -64,5 +64,10 @@ Install rust packages for ros2
 ```
 
 
-https://automaticaddison.com/go-to-a-goal-location-upon-low-battery-ros-2-navigation/
+```sh
+export LIBGL_ALWAYS_SOFTWARE=1
+```
 
+```sh
+source /usr/share/gazebo/setup.sh
+```
